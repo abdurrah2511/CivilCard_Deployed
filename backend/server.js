@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 
 // DATABASE
 mongoose.connect(process.env.MONGO_URI)
-.then(() => console.log("MongoDB connected fro the time now"))
+.then(() => console.log("MongoDB connected for the time"))
 .catch(err => console.log(err));
 
 // SERVER START
