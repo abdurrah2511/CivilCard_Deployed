@@ -10,7 +10,7 @@ module.exports = function (req, res, next) {
 
     const actualToken = token.split(" ")[1];
 
-    const decoded = jwt.verify(actualToken, "secretkey");
+    const decoded = jwt.verify(actualToken, process.env.JWT_SECRET);
 
     req.user = decoded; // contains user id
 

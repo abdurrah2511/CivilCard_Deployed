@@ -42,7 +42,7 @@ router.post("/login", async (req, res) => {
       return res.status(400).json({ message: "Wrong password" });
     }
 
-    const token = jwt.sign({ id: user._id }, "your_jwt_secret_here"); // Use an env variable for secrets!
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
     res.json({
       token,

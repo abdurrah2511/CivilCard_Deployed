@@ -15,12 +15,12 @@ function init() {
   }
 
   /* ==== COLLECTING PRODUCT DATA FROM SERVER/DB ====*/
-  fetch("http://localhost:5000/api/products")
+  fetch("https://civil-card-backend.onrender.com/api/products")
     .then(res => res.json())
     .then(data => {
       allProducts = data;
       
-      const isHomePage = window.location.pathname.includes("mainpage.html");
+      const isHomePage = window.location.pathname.includes("index.html");
       const params = new URLSearchParams(window.location.search);
       const teamFilter = params.get("team");
 
@@ -61,7 +61,7 @@ function loadProductDetail() {
 
       productContainer.innerHTML = `
         <nav class="breadcrumb">
-            <a href="mainpage.html">Home</a> > <a href="collections.html">Collections</a> > <span>${product.name}</span>
+            <a href="index.html">Home</a> > <a href="collections.html">Collections</a> > <span>${product.name}</span>
         </nav>
         <div class="product-card">
             <div class="card-image">
@@ -275,7 +275,7 @@ function viewProduct(id) {
 function logout() {
   localStorage.clear();
   alert("You have logged out.");
-  window.location.href = "mainpage.html";
+  window.location.href = "index.html";
 }
 
 /* ===== ON LOAD ===== */

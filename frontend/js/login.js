@@ -14,7 +14,7 @@ async function login() {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/auth/login", {
+    const res = await fetch("https://civil-card-backend.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -37,7 +37,7 @@ async function login() {
     alert("Login successful 🎉");
 
     // redirect to home
-    window.location.href = "mainpage.html";
+    window.location.href = "index.html";
 
   } catch (err) {
     console.log(err);
