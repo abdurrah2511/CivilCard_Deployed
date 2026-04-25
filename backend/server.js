@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const dbURI = process.env.MONGO_URI;
 
 const cors = require("cors");
 const authRoutes = require("./routes/auth");
@@ -21,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 // DATABASE
-mongoose.connect("mongodb://127.0.0.1:27017/civilcard")
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB connected fro the time now"))
 .catch(err => console.log(err));
 
