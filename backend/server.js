@@ -11,7 +11,7 @@ const orderRoutes = require("./routes/order");
 const app = express();
 
 // MIDDLEWARE
-app.use(cors({origin:"*", credentials:true}));
+app.use(cors({origin:'https://civilcard.netlify.app'}));
 app.use(express.json());
 
 // test route
