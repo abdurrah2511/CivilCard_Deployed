@@ -52,7 +52,7 @@ function loadProductDetail() {
 
   if (!id || !productContainer) return;
 
-  fetch("http://localhost:5000/api/products/" + id)
+  fetch("https://codealpha-civilcard.onrender.com/api/products/" + id)
     .then(res => res.json())
     .then(product => {
       document.title = product.name;
@@ -245,7 +245,7 @@ function addToCart(productId) {
   
   if (!product) {
     // If not found (maybe page refreshed), fetch from API
-    fetch("http://localhost:5000/api/products/" + productId)
+    fetch("https://codealpha-civilcard.onrender.com/api/products/" + productId)
       .then(res => res.json())
       .then(fetchedProduct => saveToCart(fetchedProduct));
   } else {
