@@ -11,7 +11,7 @@ const orderRoutes = require("./routes/order");
 const app = express();
 
 // MIDDLEWARE
-app.use(cors({origin:'https://civilcard.netlify.app'}));
+app.use(cors({origin:'*', methods:["GET","POST", "PUT", "DELETE"]}));
 app.use(express.json());
 
 // test route
@@ -25,12 +25,12 @@ mongoose.connect(process.env.MONGO_URI)
 .catch(err => console.log(err));
 
 // SERVER START
-app.listen(5000, () => console.log("Server running on port 5000, yep it is"));
+app.listen(5000, () => console.log("Server running , yep it is"));
 
 app.use("/api/auth", authRoutes);
 
 app.use("/api/products", productRoutes);
 
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use("/images", express.static(path.join(__dirname,"images")));
 
 app.use("/api/orders", orderRoutes);
