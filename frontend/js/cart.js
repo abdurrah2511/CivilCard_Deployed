@@ -109,7 +109,7 @@ function checkout() {
     0
   );
 
-  fetch("https://civil-card-backend.onrender.com/api/orders", {
+  fetch("https://codealpha-civilcard.onrender.com/api/orders", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

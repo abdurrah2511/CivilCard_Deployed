@@ -7,7 +7,7 @@ const userId = localStorage.getItem("userId");
 if (!userId) {
   orders.innerHTML = "<p class=no-login>Please login</p>";
 } else {
-  fetch(`https://civil-card-backend.onrender.com/api/orders/${userId}`)
+  fetch(`https://codealpha-civilcard.onrender.com/api/orders/${userId}`)
     .then(res => res.json())
     .then(data => {
       data.forEach(order => {

@@ -15,7 +15,7 @@ function init() {
   }
 
   /* ==== COLLECTING PRODUCT DATA FROM SERVER/DB ====*/
-  fetch("https://civil-card-backend.onrender.com/api/products")
+  fetch("https://codealpha-civilcard.onrender.com/api/products")
     .then(res => res.json())
     .then(data => {
       allProducts = data;

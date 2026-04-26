@@ -15,7 +15,7 @@ async function register(event) {
   }
 
   try {
-    const res = await fetch("https://civil-card-backend.onrender.com/api/auth/register", {
+    const res = await fetch("https://codealpha-civilcard.onrender.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

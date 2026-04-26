@@ -14,7 +14,7 @@ async function login() {
   }
 
   try {
-    const res = await fetch("https://civil-card-backend.onrender.com/api/auth/login", {
+    const res = await fetch("https://codealpha-civilcard.onrender.com/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
