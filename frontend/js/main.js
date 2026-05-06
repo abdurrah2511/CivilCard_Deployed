@@ -272,6 +272,11 @@ function viewProduct(id) {
   window.location.href = "product-single.html?id=" + id;
 }
 
+function             
+() {
+  window.location.href = "collections.html";
+}
+
 function logout() {
   localStorage.clear();
   alert("You have logged out.");
