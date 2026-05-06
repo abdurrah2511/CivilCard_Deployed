@@ -31,6 +31,6 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/products", productRoutes);
 
-app.use("/images", express.static(path.join(__dirname,"defaults")));
+app.use("/defaults", express.static(path.join(__dirname,"defaults")));
 
 app.use("/api/orders", orderRoutes);
