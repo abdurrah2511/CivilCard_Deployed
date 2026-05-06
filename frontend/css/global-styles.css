@@ -13,7 +13,7 @@ body::-webkit-scrollbar-thumb{background-color: #666; border-radius: 20px; }
          position: sticky;  top: 0;  z-index: 1000; width: 100%;}
 .nav-left { font-size: 40px; font-weight: 700; }
 .nav-center a, .nav-right a { text-decoration: none; color: #bbb; margin: 0 15px; font-size: 15px; font-weight: 300; cursor: none; }
-.authSection{ border: 1px solid #ab8800; padding: 5px; }
+.authSection{ border: 1px solid #bbb; padding: 5px; }
 .divider{  color: #bbb;}
 
 /* CONTAINERS */
